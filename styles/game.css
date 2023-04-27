@@ -4,3 +4,9 @@
     background-repeat: no-repeat;
     background-size: 80px;
 }
+.board{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
