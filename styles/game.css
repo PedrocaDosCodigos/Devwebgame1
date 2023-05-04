@@ -1,12 +1,35 @@
-*{
-  padding: 0;  
-  margin: 0;
+* {
+    padding: 0;
+    margin: 0;
+
 }
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .path {
     height: 80px;
     width: 80px;
     background-repeat: no-repeat;
     background-size: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .board {
@@ -18,21 +41,19 @@
 }
 
 #path36 {
-    background-image: url('../assets/characters/ufo.png')
+    background-image: url('../assets/characters/ufo.png');
+}
+#path1{
+    background-image: url('../assets/tiles/path_free.png');
 }
 
-main {
-    height: 100%;
-    width:  100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#character{
+    height: 60px;
+    width: 60px;
+   background-image: url('../assets/characters/player.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 50px;
+
 }
-body{
-    height: 100%;
-    width: 100%;
-}
-html{
-    width: 100vw;
-    height: 100vh;
-}
+    
