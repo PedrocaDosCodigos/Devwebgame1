@@ -1,12 +1,38 @@
-.path{
+*{
+  padding: 0;  
+  margin: 0;
+}
+.path {
     height: 80px;
     width: 80px;
     background-repeat: no-repeat;
     background-size: 80px;
 }
-.board{
+
+.board {
     height: 400px;
-    width: 400px;
+    width: 480px;
     display: flex;
     flex-wrap: wrap;
+
+}
+
+#path36 {
+    background-image: url('../assets/characters/ufo.png')
+}
+
+main {
+    height: 100%;
+    width:  100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    width: 100vw;
+    height: 100vh;
 }
