@@ -12,7 +12,7 @@ html {
 body {
     height: 100%;
     width: 100%;
-    background-color:white;
+    background-color:rgb;
 }
 
 main {
@@ -38,6 +38,8 @@ main {
     width: 480px;
     display: flex;
     flex-wrap: wrap;
+    border: 5px ridge #353535;
+
     
 
 }
