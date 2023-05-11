@@ -3,7 +3,7 @@ const board = []
 function loadgame() {
     board.push("start")
 
-    for (let i = 2; i <= 35; i++) {
+    for (let i = 2; i <= 99; i++) {
         
         console.log(i);
         const randomPath = Math.floor(Math.random() * 2)

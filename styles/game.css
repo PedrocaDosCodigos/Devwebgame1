@@ -12,6 +12,7 @@ html {
 body {
     height: 100%;
     width: 100%;
+    background-color:white;
 }
 
 main {
@@ -23,24 +24,25 @@ main {
 }
 
 .path {
-    height: 80px;
-    width: 80px;
+    height: 48px;
+    width: 48px;
     background-repeat: no-repeat;
-    background-size: 80px;
+    background-size: 48px;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
 .board {
-    height: 400px;
+    height: 480px;
     width: 480px;
     display: flex;
     flex-wrap: wrap;
+    
 
 }
 
-#path36 {
+#path100 {
     background-image: url('../assets/characters/ufo.png');
 }
 #path1{
