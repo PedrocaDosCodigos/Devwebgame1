@@ -12,7 +12,7 @@ html {
 body {
     height: 100%;
     width: 100%;
-    background-color:rgb;
+    background-color: rgb;
 }
 
 main {
@@ -42,28 +42,37 @@ main {
     flex-wrap: wrap;
     border: 5px ridge #353535;
 
-    
+
 
 }
 
 #path100 {
     background-image: url('../assets/characters/ufo.png');
 }
-#path1{
+
+#path1 {
     background-image: url('../assets/tiles/path_free.png');
 }
 
-#character{
+#character {
     height: 60px;
     width: 60px;
-   background-image: url('../assets/characters/player.png');
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: 50px;
+    background-image: url('../assets/characters/player.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
 
 }
-.btn-dialogue{
+
+.btn-dialogue {
     height: 50px;
     width: 500px;
 }
-    
+
+.sound {
+    height: 50px;
+    position: fixed;
+    top: 80px;
+    left: 380px;
+
+}

@@ -1,6 +1,12 @@
+let enabledSystemSound = true
+const music = new Audio()
+music.src = ""
+music.play()
+
+
 const board = []
 
-function loadgame() {
+function loadGame() {
     board.push("start")
 
     for (let i = 2; i <= 99; i++) {
@@ -24,12 +30,32 @@ function loadgame() {
 
     console.log(board)
 }
-loadgame();
+loadGame();
+
 function dialogue() {
     const dialogueButton = document.getElementById("btn-dialogue")
-dialogueButton.style.display="none"
+    dialogueButton.style.display = "none"
 }
 
+function handleSound() {
+    const soundButton = document.getElementById("sound")
+    if (enabledSystemSound) {
+        enabledSystemSound = false
+        soundButton.src = "../Devwebgame1/assets/images/mute.png"
+        music.volume = 0
+
+    } else {
+        enabledSystemSound = true
+        soundButton.src = "../Devwebgame1/assets/images/muteNao.png"
+        music.volume = 100
+
+
+
+    }
+
+
+
+}
 
 
 
