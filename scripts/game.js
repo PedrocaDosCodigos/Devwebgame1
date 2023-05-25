@@ -1,7 +1,7 @@
 let enabledSystemSound = true
 const music = new Audio()
-music.src = ""
-music.play()
+music.src = "./assets/audios/music.mp3"
+music.play();
 
 
 const board = []
