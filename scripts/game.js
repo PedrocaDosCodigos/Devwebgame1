@@ -41,12 +41,12 @@ function handleSound() {
     const soundButton = document.getElementById("sound")
     if (enabledSystemSound) {
         enabledSystemSound = false
-        soundButton.src = "../Devwebgame1/assets/images/mute.png"
+        soundButton.src = "./assets/images/mute.png"
         music.volume = 0
 
     } else {
         enabledSystemSound = true
-        soundButton.src = "../Devwebgame1/assets/images/muteNao.png"
+        soundButton.src = "./assets/images/muteNao.png"
         music.volume = 100
 
 
