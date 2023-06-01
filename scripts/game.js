@@ -56,7 +56,14 @@ function handleSound() {
 
 }
 
-window.addEventListener( 'keydown', function () {})
+window.addEventListener( 'keydown', function (event) {
+console.log (event.key)
+switch(event.key){
+    case "ArrowDown":
+        alert(teste)
+        break;
+}
+})
 
 
 
