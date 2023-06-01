@@ -47,7 +47,7 @@ function handleSound() {
     } else {
         enabledSystemSound = true
         soundButton.src = "./assets/images/muteNao.png"
-        music.play()  
+        music.play()
         console.log("entrou no else")
 
     }
@@ -56,14 +56,24 @@ function handleSound() {
 
 }
 
-window.addEventListener( 'keydown', function (event) {
-console.log (event.key)
-switch(event.key){
-    case "ArrowDown":
-        alert(teste)
-        break;
-}
+window.addEventListener('keydown', function (event) {
+    console.log(event.key)
+    switch (event.key) {
+        case "ArrowDown":
+            movement() 
+            break;
+    }
 })
+let position = 1
+
+function movement(x) {
+    const ch = document.getElementById("character")
+    const parent = ch.parentNode
+    if (board[position + x] === 1) {
+
+    }
+
+}
 
 
 
