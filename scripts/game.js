@@ -1,7 +1,7 @@
 let enabledSystemSound = true
-const music = new Audio()
-music.src = "./assets/audios/music.mp3"
-music.play();
+const music = document.getElementById("sound-control")
+// music.src = "./assets/audios/music.mp3"
+// music.play();
 
 
 const board = []
@@ -42,14 +42,13 @@ function handleSound() {
     if (enabledSystemSound) {
         enabledSystemSound = false
         soundButton.src = "./assets/images/mute.png"
-        music.volume = 0
-
+        music.pause()
+        console.log("entrou no if")
     } else {
         enabledSystemSound = true
         soundButton.src = "./assets/images/muteNao.png"
-        music.volume = 100
-
-
+        music.play()  
+        console.log("entrou no else")
 
     }
 
@@ -57,7 +56,7 @@ function handleSound() {
 
 }
 
-
+window.addEventListener( 'keydown', function () {})
 
 
 
