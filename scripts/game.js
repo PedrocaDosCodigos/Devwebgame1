@@ -1,5 +1,6 @@
 let enabledSystemSound = true
 const music = document.getElementById("sound-control")
+let playerPosition = 1
 // music.src = "./assets/audios/music.mp3"
 // music.play();
 
@@ -11,7 +12,7 @@ function loadGame() {
 
     for (let i = 2; i <= 99; i++) {
 
-        console.log(i);
+        
         const randomPath = Math.floor(Math.random() * 2)
 
         board.push(randomPath)
@@ -28,7 +29,7 @@ function loadGame() {
     }
 
 
-    console.log(board)
+    
 }
 loadGame();
 
@@ -56,24 +57,36 @@ function handleSound() {
 
 }
 
-window.addEventListener('keydown', function (event) {
-    console.log(event.key)
-    switch (event.key) {
-        case "ArrowDown":
-            movement() 
-            break;
-    }
-})
-let position = 1
 
-function movement(x) {
-    const ch = document.getElementById("character")
-    const parent = ch.parentNode
-    if (board[position + x] === 1) {
+function movePlayer(_step) {
+    const elementToRemovePlayer = document.getElementById("path" + playerPosition)
+    elementToRemovePlayer.innerHTML = ""
+    
+    const elementToInsertPlayer = document.getElementById("path" + (playerPosition + _step))
+    elementToInsertPlayer.innerHTML = "<div id='character'></div>"
 
-    }
-
+    playerPosition = playerPosition + _step
 }
 
 
+function checkMove(_step) {
+    const newPosition = playerPosition + _step
+    
+    if (board[newPosition - 1] === 0) {
+        console.log("deu bom ou nao")
+        return true
+    }
+    return false
+
+}
+
+window.addEventListener('keydown', function (event) {
+    console.log(event.key)
+    if (event.key === "ArrowDown") {
+            if (checkMove(10)) {
+                movePlayer(10)
+            }
+            
+    }
+})
 
