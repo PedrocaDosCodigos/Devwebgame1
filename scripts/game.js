@@ -71,7 +71,7 @@ function movePlayer(_step) {
 
 function checkMove(_step) {
     const newPosition = playerPosition + _step
-    
+
     if (board[newPosition - 1] === 0) {
         console.log("deu bom ou nao")
         return true
@@ -89,4 +89,4 @@ window.addEventListener('keydown', function (event) {
             
     }
 })
-
+/// QUANDO FOR FAZER PATH COMEÇA COM 0 PQ NO BOARD COMEÇA COM 0 (para não da problema)
