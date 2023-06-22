@@ -12,7 +12,7 @@ function loadGame() {
 
     for (let i = 2; i <= 99; i++) {
 
-        
+
         const randomPath = Math.floor(Math.random() * 2)
 
         board.push(randomPath)
@@ -29,7 +29,7 @@ function loadGame() {
     }
 
 
-    
+
 }
 loadGame();
 
@@ -61,7 +61,7 @@ function handleSound() {
 function movePlayer(_step) {
     const elementToRemovePlayer = document.getElementById("path" + playerPosition)
     elementToRemovePlayer.innerHTML = ""
-    
+
     const elementToInsertPlayer = document.getElementById("path" + (playerPosition + _step))
     elementToInsertPlayer.innerHTML = "<div id='character'></div>"
 
@@ -73,7 +73,7 @@ function checkMove(_step) {
     const newPosition = playerPosition + _step
 
     if (board[newPosition - 1] === 0) {
-        console.log("deu bom ou nao")
+
         return true
     }
     return false
@@ -83,10 +83,35 @@ function checkMove(_step) {
 window.addEventListener('keydown', function (event) {
     console.log(event.key)
     if (event.key === "ArrowDown") {
-            if (checkMove(10)) {
-                movePlayer(10)
-            }
-            
+        if (checkMove(10)) {
+            movePlayer(10)
+        }
     }
-})
-/// QUANDO FOR FAZER PATH COMEÇA COM 0 PQ NO BOARD COMEÇA COM 0 (para não da problema)
+    if (event.key === "ArrowRight") {
+        if (checkMove(1)) {
+            movePlayer(1)
+        }
+        
+    }
+    if (event.key === "ArrowUp") {
+        if (checkMove(-10)) {
+            movePlayer(-10)
+        }
+    }
+    if (event.key === "ArrowLeft") {
+        if (checkMove(-1)) {
+            movePlayer(-1)
+        }
+    }
+}
+
+
+
+
+
+)
+
+/// QUANDO FOR FAZER PATH COMEÇA COM 0 PQ NO BOARD COMEÇA COM 0 (para não dar problema)
+
+
+
