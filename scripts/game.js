@@ -8,7 +8,7 @@ let playerPosition = 1
 const board = []
 
 function loadGame() {
-    board.push("start")
+    board.push(0)
 
     for (let i = 2; i <= 99; i++) {
 
