@@ -27,7 +27,7 @@ function loadGame() {
         }
 
     }
-
+    board.push(0)
 
 
 }
